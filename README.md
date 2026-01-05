@@ -24,13 +24,13 @@ SourceCommit (app / k8s 변경)
   → NKS 배포
 ```
 2. DB 테스트 자동화 파이프라인
-DB 스키마 변경 시 sysbench 기반 부하 테스트를 수행하고, 테스트 결과를 slack으로 전송합니다.
+DB 스키마 변경 시 DB 엔진 성능 테스트 수행 결과가 slack으로 전송됩니다.
 ```
 SourceCommit (db/migration 변경)
   → SourceBuild
   → App Server
-  → Flyway migrate
-  → sysbench 부하 테스트
+  → migrate
+  → 성능 테스트
   → 테스트 결과 slack 전송
 ```
 
