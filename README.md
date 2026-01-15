@@ -2,15 +2,15 @@
 본 프로젝트는 NCP 환경에서 애플리케이션 테스트/빌드/배포 및 DB 성능 테스트 과정을 자동화하는 CI/CD 파이프라인 예제입니다.
 
 실운영 환경에서는 NCP SourceCommit, SourceBuild, SourceDeploy, Container Registry, NKS를 사용해 비공개 인프라에서 파이프라인이 운영되고 있으며, 
-본 레포지토리는 실제 운영 환경을 그대로 공개하지 않고 아키텍처 구조, 파이프라인 흐름, 설계 의도를 기록하기 위한 레포지토리입니다.
+본 레포지토리는 실운영 환경을 공개하지 않고 아키텍처 구조, 파이프라인 흐름, 설계 의도 등을 기록하기 위한 레포지토리입니다.
 
 ### 구성 요소
 - NCP Source Commit
 - NCP Source Build
 - NCP Source Deploy
 - NCP Source Pipeline
-- Kubernetes (NKS)
 - NCP Container Registry
+- Kubernetes (NKS)
 
 ### 파이프라인 구성
 
@@ -27,14 +27,14 @@
     → NKS 배포
   ```
 **2. DB 테스트 자동화 파이프라인**<br>
-DB 스키마 변경 시 DB 엔진 성능 테스트 수행 결과가 slack으로 전송됩니다.
+DB 스키마 변경 시 DB 엔진 성능 테스트 수행 결과가 Slack으로 전송됩니다.
   ```
   SourceCommit (db/migration/ 변경)
     → SourceBuild
     → App Server
     → migrate
     → 성능 테스트
-    → 테스트 결과 slack 전송
+    → 테스트 결과 Slack 전송
   ```
 
 Slack으로 전송되는 성능 테스트 결과 예시는 다음과 같습니다.
