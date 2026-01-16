@@ -15,7 +15,7 @@
 - 성능 테스트: sysbench (OLTP read/write)
 - 알림: Slack Webhook
 
-####파이프라인 구성
+#### 파이프라인 구성
 
 <img width="1028" height="574" alt="과제4다이어그램" src="https://github.com/user-attachments/assets/f6db1bf9-d9ed-4d74-bc1c-79f798b84fd5" />
 
