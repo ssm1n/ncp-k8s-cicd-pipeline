@@ -47,7 +47,11 @@ Slack으로 전송되는 성능 테스트 결과 예시는 다음과 같습니�
 #### DB 성능 테스트 설정
 - **테스트 구성**: 8 threads, 60초 duration
 - **최소 성능 기준**: TPS ≥ 500/sec (기준 미달 시 CI 실패)
-- **측정 지표**: TPS, QPS, Latency (Avg/P95/Max), Error rate, Reconnects
+- **측정 지표**: 
+  - **Throughput**: TPS, QPS
+  - **Latency**: Avg, P95, Max
+  - **Workload**: Read queries, Write queries, Write ratio
+  - **Stability**: Error count/rate, Reconnects
 
 #### 환경 변수
 DB 테스트 스크립트 실행 시 다음 환경 변수가 필요합니다:
